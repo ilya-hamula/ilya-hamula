@@ -1,0 +1,84 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-basket {
+    width: 23px;
+    height: 24px;
+    background-position: -2px -2px;
+}
+
+.sprite-delivery {
+    width: 67px;
+    height: 40px;
+    background-position: -29px -2px;
+}
+
+.sprite-e-mail {
+    width: 24px;
+    height: 21px;
+    background-position: -100px -2px;
+}
+
+.sprite-goods {
+    width: 28px;
+    height: 29px;
+    background-position: -100px -27px;
+}
+
+.sprite-gps {
+    width: 20px;
+    height: 25px;
+    background-position: -2px -60px;
+}
+
+.sprite-guarantee {
+    width: 36px;
+    height: 47px;
+    background-position: -26px -46px;
+}
+
+.sprite-home {
+    width: 40px;
+    height: 40px;
+    background-position: -66px -60px;
+}
+
+.sprite-microphone {
+    width: 46px;
+    height: 50px;
+    background-position: -132px -2px;
+}
+
+.sprite-phone {
+    width: 24px;
+    height: 32px;
+    background-position: -132px -56px;
+}
+
+.sprite-services {
+    width: 27px;
+    height: 27px;
+    background-position: -110px -92px;
+}
+
+.sprite-shopping {
+    width: 38px;
+    height: 41px;
+    background-position: -2px -123px;
+}
+
+<i class="sprite sprite-basket"></i>
+<i class="sprite sprite-delivery"></i>
+<i class="sprite sprite-e-mail"></i>
+<i class="sprite sprite-goods"></i>
+<i class="sprite sprite-gps"></i>
+<i class="sprite sprite-guarantee"></i>
+<i class="sprite sprite-home"></i>
+<i class="sprite sprite-microphone"></i>
+<i class="sprite sprite-phone"></i>
+<i class="sprite sprite-services"></i>
+<i class="sprite sprite-shopping"></i>
+
