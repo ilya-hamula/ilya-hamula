@@ -1,0 +1,146 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-advantages-1 {
+    width: 60px;
+    height: 48px;
+    background-position: -2px -2px;
+}
+
+.sprite-advantages-2 {
+    width: 60px;
+    height: 45px;
+    background-position: -66px -2px;
+}
+
+.sprite-advantages-3 {
+    width: 60px;
+    height: 57px;
+    background-position: -66px -51px;
+}
+
+.sprite-advantages-4 {
+    width: 60px;
+    height: 49px;
+    background-position: -2px -112px;
+}
+
+.sprite-advantages-5 {
+    width: 60px;
+    height: 60px;
+    background-position: -66px -112px;
+}
+
+.sprite-advantages-6 {
+    width: 53px;
+    height: 67px;
+    background-position: -130px -2px;
+}
+
+.sprite-advantages-arrow {
+    width: 43px;
+    height: 46px;
+    background-position: -130px -73px;
+}
+
+.sprite-download-map {
+    width: 31px;
+    height: 31px;
+    background-position: -2px -73px;
+}
+
+.sprite-download-map-red {
+    width: 31px;
+    height: 31px;
+    background-position: -130px -123px;
+}
+
+.sprite-fb {
+    width: 8px;
+    height: 17px;
+    background-position: -37px -73px;
+}
+
+.sprite-google-plus {
+    width: 21px;
+    height: 13px;
+    background-position: -165px -123px;
+}
+
+.sprite-inst {
+    width: 16px;
+    height: 16px;
+    background-position: -165px -140px;
+}
+
+.sprite-mail-icon {
+    width: 20px;
+    height: 14px;
+    background-position: -130px -160px;
+}
+
+.sprite-ok {
+    width: 11px;
+    height: 18px;
+    background-position: -49px -73px;
+}
+
+.sprite-phone-icon {
+    width: 18px;
+    height: 18px;
+    background-position: -154px -160px;
+}
+
+.sprite-place-icon {
+    width: 14px;
+    height: 18px;
+    background-position: -187px -2px;
+}
+
+.sprite-twitter {
+    width: 19px;
+    height: 15px;
+    background-position: -177px -73px;
+}
+
+.sprite-underline {
+    width: 155px;
+    height: 11px;
+    background-position: -2px -182px;
+}
+
+.sprite-underline-gray {
+    width: 155px;
+    height: 11px;
+    background-position: -2px -197px;
+}
+
+.sprite-vk {
+    width: 20px;
+    height: 11px;
+    background-position: -177px -92px;
+}
+
+<i class="sprite sprite-advantages-1"></i>
+<i class="sprite sprite-advantages-2"></i>
+<i class="sprite sprite-advantages-3"></i>
+<i class="sprite sprite-advantages-4"></i>
+<i class="sprite sprite-advantages-5"></i>
+<i class="sprite sprite-advantages-6"></i>
+<i class="sprite sprite-advantages-arrow"></i>
+<i class="sprite sprite-download-map"></i>
+<i class="sprite sprite-download-map-red"></i>
+<i class="sprite sprite-fb"></i>
+<i class="sprite sprite-google-plus"></i>
+<i class="sprite sprite-inst"></i>
+<i class="sprite sprite-mail-icon"></i>
+<i class="sprite sprite-ok"></i>
+<i class="sprite sprite-phone-icon"></i>
+<i class="sprite sprite-place-icon"></i>
+<i class="sprite sprite-twitter"></i>
+<i class="sprite sprite-underline"></i>
+<i class="sprite sprite-underline-gray"></i>
+<i class="sprite sprite-vk"></i>
