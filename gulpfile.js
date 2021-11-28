@@ -1,33 +1,55 @@
-const gulp = require('gulp'),
-      sass = require('gulp-sass'),
-      csso = require('gulp-csso'),
-      gutil = require('gulp-util'),
-      notify = require('gulp-notify'),
-      sourcemaps = require('gulp-sourcemaps'),
-      browserSync = require('browser-sync').create();
+const gulp          = require('gulp'),
+      {series}      = require('gulp'),
+      notify        = require('gulp-notify'),
+      sass          = require('gulp-sass')(require('sass')),
+      sourcemaps    = require('gulp-sourcemaps'),
+      autoprefixer  = require('gulp-autoprefixer'),
+      browserSync   = require('browser-sync').create(),
+      uglify        = require('gulp-uglify'),
+      srcSass       = ['./src/sass/**/*.+(sass|scss)'],
+      srcJs         = './src/js/**/*.js';
 
-gulp.task('sass', done => {
-    gulp.src('src/sass/**/*.sass')
+exports.serve = series(
+  sassTask,
+  jsTask,
+  browserSyncTask,
+  watchTask
+);
+
+function watchTask(cb) {
+  gulp.watch(srcSass, gulp.series(sassTask));
+  gulp.watch("./*.html").on('change', browserSync.reload);
+  gulp.watch(srcJs).on('change', gulp.series(jsTask));
+  cb();
+}
+
+function browserSyncTask(cb){
+  browserSync.init({
+    server: "./",
+    browser: 'chrome',
+    notify: false,
+    logLevel: 'info',
+    logConnections: true,
+    logFileChanges: true,
+  });
+  cb();
+}
+
+function jsTask(cb){
+  gulp.src(srcJs)
+    .pipe(uglify())
+    .pipe((gulp.dest('./public/js/')))
+    .pipe(browserSync.stream())
+  cb();
+}
+
+function sassTask(cb){
+  gulp.src(srcSass)
     .pipe(sourcemaps.init())
-    .pipe(
-        sass({outputStyle: 'expanded'})
-            .on('error', gutil.log)
-    )
-    .on('error', notify.onError())
-    .pipe(csso())
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('public/css/'))
-    .pipe(browserSync.reload({stream: true}))
-    done();
-});
-
-gulp.task('browser-sync', function() {
-    browserSync.init({
-        server: {
-            baseDir: "./",
-            index: "index.html"
-        }
-    });
-    gulp.watch('src/sass/**/*.sass', ['sass']);
-});
-
+    .pipe(sass({outputStyle: 'compressed'}).on('error', notify.onError()))
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.write('./maps'))
+    .pipe(gulp.dest('./public/css/'))
+    .pipe(browserSync.stream())
+  cb();
+}
